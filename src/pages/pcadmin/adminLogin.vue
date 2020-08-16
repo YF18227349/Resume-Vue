@@ -140,6 +140,7 @@ export default {
             console.log(response);
             if (response.data.status == 1) {
               localStorage.setItem("username", response.data.data.username);
+              localStorage.setItem("token", response.data.token);
               localStorage.setItem("id", response.data.data._id);
               this.$store
                 .dispatch("setToken", response.data.data.username)
